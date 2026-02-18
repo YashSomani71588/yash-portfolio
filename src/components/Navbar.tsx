@@ -2,6 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { Github, Linkedin, Mail } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
     return (
@@ -39,6 +40,8 @@ export default function Navbar() {
                             </a>
                         </div>
                     </div>
+
+                    <ThemeToggle />
 
                     <div className="flex flex-row gap-5">
                         <Link href="https://github.com/YashSomani71588" target="_blank" className="text-gray-300 hover:text-white transition">

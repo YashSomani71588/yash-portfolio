@@ -25,9 +25,34 @@
   @apply px-6 py-3 rounded-full border border-purple-500/30 bg-white/5 text-white font-semibold backdrop-blur-md hover:bg-white/10 transition-all duration-300 hover:scale-105 active:scale-95;
 }
 
-:root {
-  --background: #030014;
+/* Theme Variables */
+:root,
+[data-theme="dark"] {
+  /* Modern Dark Blue Theme */
+  --background: #1A1F3F;
+  --background-secondary: #142171;
   --foreground: #ffffff;
+  --text-primary: #ffffff;
+  --text-secondary: #e0e0e0;
+  --accent-primary: #3FA7BFF;
+  --accent-secondary: #7042f8;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --shadow-color: rgba(42, 14, 97, 0.5);
+}
+
+[data-theme="light"] {
+  /* Clean Light Theme */
+  --background: #F5F7FA;
+  --background-secondary: #FFFFFF;
+  --foreground: #1A4F63;
+  --text-primary: #1A4F63;
+  --text-secondary: #2E1F1F;
+  --accent-primary: #3FA7BFF;
+  --accent-secondary: #2E1F1F;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --border-color: rgba(26, 79, 99, 0.2);
+  --shadow-color: rgba(63, 167, 191, 0.2);
 }
 
 html {
@@ -36,9 +61,10 @@ html {
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: var(--text-primary);
   font-family: var(--font-inter), sans-serif;
   overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* Custom Scrollbar */
